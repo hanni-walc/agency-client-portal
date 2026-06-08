@@ -1,18 +1,20 @@
-export default function RoutePage() {
+export default function PublicClientPortalPage() {
   return (
     <main className="shell">
       <section className="frame hero">
-        <p className="eyebrow">Route</p>
-        <h1>Page scaffold</h1>
-        <p className="lead">This route exists so the repo is structurally complete and ready for a real backend implementation.</p>
-        <div className="row">
-          <a className="button" href="/app">Back to dashboard</a>
-          <a className="ghost" href="/">Open landing page</a>
-        </div>
+        <p className="eyebrow">Client portal</p>
+        <h1>Northstar Kitchen project workspace</h1>
+        <p className="lead">This public-facing sample shows how the agency can present work professionally to a client.</p>
       </section>
-      <section className="card">
-        <p className="kicker">Implementation note</p>
-        <p className="muted">Replace this scaffold with route-specific behavior, forms, or detail views as the product is implemented.</p>
+      <section className="grid cols-2">
+        <article className="card">
+          <p className="kicker">Recent update</p>
+          <p className="muted">We finished the homepage revisions and moved the contact flow into QA.</p>
+        </article>
+        <article className="card">
+          <p className="kicker">Pending approval</p>
+          <p className="muted">Please review the final hero section and approve the mobile menu treatment.</p>
+        </article>
       </section>
     </main>
   );

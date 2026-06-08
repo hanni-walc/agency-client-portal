@@ -1,18 +1,33 @@
-export default function RoutePage() {
+const clients = [
+  { name: 'Northstar Kitchen', tier: 'Agency Pro', portal: 'Live', projects: 3, balance: '$2,100 due soon' },
+  { name: 'Aster Design Co', tier: 'Agency', portal: 'Live', projects: 1, balance: '$500 overdue' },
+  { name: 'Studio Juniper', tier: 'White-label', portal: 'Live', projects: 5, balance: '$0 paid' },
+];
+
+export default function ClientsPage() {
   return (
     <main className="shell">
       <section className="frame hero">
-        <p className="eyebrow">Route</p>
-        <h1>Page scaffold</h1>
-        <p className="lead">This route exists so the repo is structurally complete and ready for a real backend implementation.</p>
-        <div className="row">
-          <a className="button" href="/app">Back to dashboard</a>
-          <a className="ghost" href="/">Open landing page</a>
-        </div>
+        <p className="eyebrow">Clients</p>
+        <h1>Everything organized by client workspace.</h1>
+        <p className="lead">A clean list for the agency team, with clear portal state and payment visibility.</p>
       </section>
+
       <section className="card">
-        <p className="kicker">Implementation note</p>
-        <p className="muted">Replace this scaffold with route-specific behavior, forms, or detail views as the product is implemented.</p>
+        <table className="table">
+          <thead><tr><th>Name</th><th>Tier</th><th>Portal</th><th>Projects</th><th>Balance</th></tr></thead>
+          <tbody>
+            {clients.map((client) => (
+              <tr key={client.name}>
+                <td>{client.name}</td>
+                <td>{client.tier}</td>
+                <td>{client.portal}</td>
+                <td>{client.projects}</td>
+                <td>{client.balance}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </section>
     </main>
   );

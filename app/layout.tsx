@@ -1,8 +1,9 @@
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
-export const metadata = {
-  title: "Money-Making Project",
-  description: "A polished product-ready SaaS starter.",
+export const metadata: Metadata = {
+  title: 'Agency Client Portal',
+  description: 'A polished client workspace for approvals, files, updates, and invoices.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
