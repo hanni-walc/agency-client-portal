@@ -1,3 +1,7 @@
+export function generateStaticParams() {
+  return [{ id: 'website-redesign' }];
+}
+
 export default function ProjectPage() {
   return (
     <main className="shell">

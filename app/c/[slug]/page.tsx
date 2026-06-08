@@ -1,3 +1,7 @@
+export function generateStaticParams() {
+  return [{ slug: 'northstar-kitchen' }];
+}
+
 export default function PublicClientPortalPage() {
   return (
     <main className="shell">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBasePath } from "@/lib/site-path";
 
 const featureRows = [
   ['Branded client portals', 'Give every client a clean, premium workspace'],
@@ -23,7 +24,7 @@ export default function HomePage() {
           A client-facing portal for freelancers and small agencies. Centralize approvals, project updates, files, and invoices in one polished workspace.
         </p>
         <div className="row">
-          <Link className="button" href="/app">Open dashboard</Link>
+          <Link className="button" href={withBasePath('/app')}>Open dashboard</Link>
           <a className="ghost" href="#features">See features</a>
         </div>
       </section>

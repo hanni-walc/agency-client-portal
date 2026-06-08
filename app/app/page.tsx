@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { clientPortalDemo } from '@/lib/portal';
+import { withBasePath } from "@/lib/site-path";
 
 const demo = clientPortalDemo();
 
@@ -37,8 +38,8 @@ export default function DashboardPage() {
           <h2>What to do now</h2>
           <p className="muted">{demo.nextAction}</p>
           <div className="row">
-            <Link className="button" href="/app/projects/website-redesign">Open project</Link>
-            <Link className="ghost" href="/app/invoices">View invoices</Link>
+            <Link className="button" href={withBasePath('/app/projects/website-redesign')}>Open project</Link>
+            <Link className="ghost" href={withBasePath('/app/invoices')}>View invoices</Link>
           </div>
         </article>
       </section>
